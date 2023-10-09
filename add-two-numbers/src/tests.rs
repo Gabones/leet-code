@@ -1,7 +1,8 @@
 use crate::add_two_numbers;
-use crate::listnode::{to_list, to_vector};
+use crate::listnode::to_list;
 
 #[test]
+//#[ignore]
 fn case_1() {
     let l1 = to_list(vec![2, 4, 3]);
     let l2 = to_list(vec![5, 6, 4]);
@@ -10,7 +11,7 @@ fn case_1() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn case_2() {
     let l1 = to_list(vec![0]);
     let l2 = to_list(vec![0]);
@@ -18,7 +19,7 @@ fn case_2() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn case_3() {
     let l1 = to_list(vec![9, 9, 9, 9, 9, 9, 9]);
     let l2 = to_list(vec![9, 9, 9, 9]);
@@ -29,7 +30,7 @@ fn case_3() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn case_1566() {
     let l1 = to_list(vec![
         2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3,
