@@ -1,7 +1,7 @@
 #![allow(dead_code)]
 
 mod listnode;
-use listnode::ListNode;
+use listnode::{to_list, to_vector, ListNode};
 #[cfg(test)]
 mod tests;
 
@@ -12,6 +12,9 @@ pub fn add_two_numbers(
     let mut first_str = String::new();
     let mut second_str = String::new();
     let mut current = l1.as_ref().unwrap().as_ref();
+
+    // println!("{:?}", to_vector(&l1));
+    // println!("{:?}", to_vector(&l2));
 
     first_str = loop {
         first_str.push_str(&current.val.to_string());
@@ -49,14 +52,11 @@ pub fn add_two_numbers(
 
     let str_result = (first + second).to_string();
 
-    let mut result = ListNode::new(0);
-    for (i, word) in str_result.chars().rev().enumerate() {
-        if i == 0 {
-            result.val = word.to_digit(10).unwrap() as i32;
-        } else {
-            result.append(word.to_digit(10).unwrap() as i32);
-        }
-    }
+    let vec_result: Vec<i32> = str_result
+        .chars()
+        .rev()
+        .map(|c| c.to_digit(10).unwrap_or(0) as i32)
+        .collect();
 
-    return Some(Box::new(result));
+    return to_list(vec_result);
 }

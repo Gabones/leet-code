@@ -34,3 +34,22 @@ pub fn to_list(vector: Vec<i32>) -> Option<Box<ListNode>> {
     }
     curr
 }
+
+pub fn to_vector(list: &Option<Box<ListNode>>) -> Vec<i32> {
+    let mut curr = list.as_ref().unwrap().as_ref();
+    let mut str_vector = String::new();
+    str_vector = loop {
+        str_vector.push_str(&curr.val.to_string());
+        let option_next = curr.next.as_ref();
+        if option_next != None {
+            curr = option_next.unwrap().as_ref();
+        } else {
+            break str_vector;
+        }
+    };
+    let vector: Vec<i32> = str_vector
+        .chars()
+        .map(|c| c.to_digit(10).unwrap_or(0) as i32)
+        .collect();
+    vector
+}
