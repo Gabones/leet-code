@@ -6,18 +6,43 @@ mod tests;
 pub struct Solution;
 
 impl Solution {
-    pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        let mut hashmap = HashMap::new();
-        for i in 0..nums.len() {
-            hashmap.insert(nums[i].to_string(), i);
+    pub fn two_sum_brute_force(nums: Vec<i32>, target: i32) -> Vec<i32> {
+        for x in 0..nums.len() {
+            for y in x + 1..nums.len() {
+                if nums[x] + nums[y] == target {
+                    return Vec::from([x as i32, y as i32]);
+                }
+            }
         }
 
-        for i in 0..nums.len() {
-            let complement = target - nums[i];
-            if hashmap.contains_key(&complement.to_string())
-                && hashmap[&complement.to_string()] != i
-            {
-                return Vec::from([i as i32, hashmap[&complement.to_string()] as i32]);
+        return Vec::from([0, 0]);
+    }
+
+    pub fn two_sum_two_pass_hashmap(nums: Vec<i32>, target: i32) -> Vec<i32> {
+        let mut hashmap = HashMap::new();
+        for (index, value) in nums.iter().enumerate() {
+            hashmap.insert(value, index);
+        }
+
+        for (index, value) in nums.iter().enumerate() {
+            let complement = target - value;
+            if hashmap.contains_key(&complement) && hashmap[&complement] != index {
+                return Vec::from([index as i32, hashmap[&complement] as i32]);
+            }
+        }
+
+        return Vec::new();
+    }
+
+    pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
+        let mut hashmap = HashMap::new();
+
+        for (index, value) in nums.iter().enumerate() {
+            let complement = target - value;
+            if hashmap.contains_key(&complement) {
+                return Vec::from([hashmap[&complement] as i32, index as i32]);
+            } else {
+                hashmap.insert(value, index);
             }
         }
 

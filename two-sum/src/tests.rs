@@ -3,24 +3,24 @@ use crate::Solution;
 #[test]
 //#[ignore]
 fn case_1() {
-    let nums = vec![2, 7, 11, 15];
-    let target = 9;
-
-    assert_eq!(Solution::two_sum(nums, target), [0, 1]);
+    assert_eq!(Solution::two_sum_brute_force(vec![2, 7, 11, 15], 9), [0, 1]);
+    assert_eq!(
+        Solution::two_sum_two_pass_hashmap(vec![2, 7, 11, 15], 9),
+        [0, 1]
+    );
+    assert_eq!(Solution::two_sum(vec![2, 7, 11, 15], 9), [0, 1]);
 }
 #[test]
 //#[ignore]
 fn case_2() {
-    let nums = vec![3, 2, 4];
-    let target = 6;
-
-    assert_eq!(Solution::two_sum(nums, target), [1, 2]);
+    assert_eq!(Solution::two_sum_brute_force(vec![3, 2, 4], 6), [1, 2]);
+    assert_eq!(Solution::two_sum_two_pass_hashmap(vec![3, 2, 4], 6), [1, 2]);
+    assert_eq!(Solution::two_sum(vec![3, 2, 4], 6), [1, 2]);
 }
 #[test]
 //#[ignore]
 fn case_3() {
-    let nums = vec![3, 3];
-    let target = 6;
-
-    assert_eq!(Solution::two_sum(nums, target), [0, 1]);
+    assert_eq!(Solution::two_sum_brute_force(vec![3, 3], 6), [0, 1]);
+    assert_eq!(Solution::two_sum_two_pass_hashmap(vec![3, 3], 6), [0, 1]);
+    assert_eq!(Solution::two_sum(vec![3, 3], 6), [0, 1]);
 }
