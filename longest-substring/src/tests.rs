@@ -51,7 +51,6 @@ fn case_477() {
     );
 }
 
-// TODO tenho que voltar no índice onde ocorreu o erro e não uma casa decimal
 #[test]
 // #[ignore]
 fn case_702() {
