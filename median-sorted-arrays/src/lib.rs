@@ -1,3 +1,6 @@
+use std::mem::swap;
+use std::cmp;
+
 #[cfg(test)]
 mod tests;
 
@@ -79,5 +82,37 @@ impl Solution {
                     + solve(&nums1, &nums2, n / 2, 0, na - 1, 0, nb - 1))
                 / 2.0;
         }
+    }
+
+    pub fn find_median_sorted_arrays_better_binary_search(mut nums1: Vec<i32>,mut nums2: Vec<i32>) -> f64 {
+        if nums1.len() > nums2.len() {
+            swap(&mut nums1, &mut nums2);
+        }
+        let [m, n] = [nums1.len() as i32, nums2.len() as i32];
+        let [mut left, mut right] = [0,m];
+
+        while left <= right {
+            let partition_a:i32 = ((left + right)/2).try_into().unwrap();
+            let partition_b:i32 = (((m + n + 1) / 2) - partition_a).try_into().unwrap();
+
+            let a_left = if partition_a - 1 < 0 { i32::MIN } else { nums1[(partition_a - 1) as usize] };
+            let a_right = if partition_a == m { i32::MAX } else { nums1[partition_a as usize] };
+            let b_left = if partition_b == 0 { i32::MIN } else { nums2[(partition_b - 1) as usize] };
+            let b_right = if partition_b == n { i32::MAX } else { nums2[partition_b as usize] };
+
+            if a_left <= b_right && b_left <= a_right {
+                return if (m+n) % 2 == 0 {
+                    (cmp::max(a_left, b_left) + cmp::min(a_right, b_right)) as f64 / 2.0
+                } else {
+                    cmp::max(a_left, b_left) as f64
+                };
+            } else if a_left > b_left {
+                right = partition_a - 1;
+            } else if b_left > a_left {
+                left = partition_a + 1;
+            }
+        }
+
+        0.0
     }
 }
