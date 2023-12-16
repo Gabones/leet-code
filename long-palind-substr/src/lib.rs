@@ -59,12 +59,15 @@ impl Solution {
     pub fn longest_palindrome_center_expand(s: String) -> String {
         pub fn expand(s: &String, i: i32, j: i32) -> usize {
             let [mut left, mut right] = [i, j];
-            while left >= 0 && right < s.len() as i32 && s.as_bytes()[left as usize] == s.as_bytes()[right as usize] {
+            while left >= 0
+                && right < s.len() as i32
+                && s.as_bytes()[left as usize] == s.as_bytes()[right as usize]
+            {
                 right += 1;
                 left -= 1;
             }
 
-            return (right - left + 1).try_into().unwrap();
+            return (right - left - 1).try_into().unwrap();
         }
 
         let mut ans = [0, 0];
