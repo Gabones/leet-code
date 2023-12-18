@@ -20,17 +20,12 @@ impl Solution {
             if reverse {
                 row -= 1;
                 column += 1;
-                if row == 0 {
-                    reverse = false;
-                }
             } else {
-                if row + 1 > num_rows - 1 && row > 0 {
-                    row -= 1;
-                    reverse = true;
-                    column += 1;
-                } else {
-                    row += 1;
-                }
+                row += 1;
+            }
+
+            if row == 0 || row == (num_rows - 1) {
+                reverse = !reverse;
             }
         }
 

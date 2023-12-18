@@ -17,3 +17,9 @@ fn case_2() {
 fn case_3() {
     assert!(Solution::convert("A".to_owned(), 1) == "A");
 }
+
+#[test]
+// #[ignore]
+fn case_4() {
+    assert!(Solution::convert("ABAB".to_owned(), 2) == "AABB");
+}
