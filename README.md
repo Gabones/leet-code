@@ -12,3 +12,4 @@ This repo is under construction...
 5. [Longest Palindromic Substring](https://github.com/Gabones/leet-code/tree/master/long-palind-substr)
 6. [Zigzag Conversion](https://github.com/Gabones/leet-code/tree/master/zigzag-conversion)
 7. [Reverse Integer](https://github.com/Gabones/leet-code/tree/master/reverse-integer)
+8. [String to Integer (atoi)](https://github.com/Gabones/leet-code/tree/master/string-to-integer)
