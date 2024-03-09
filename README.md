@@ -13,3 +13,4 @@ This repo is under construction...
 6. [Zigzag Conversion](https://github.com/Gabones/leet-code/tree/master/zigzag-conversion)
 7. [Reverse Integer](https://github.com/Gabones/leet-code/tree/master/reverse-integer)
 8. [String to Integer (atoi)](https://github.com/Gabones/leet-code/tree/master/string-to-integer)
+9. [Palindrome Number](https://github.com/Gabones/leet-code/tree/master/palindrome-number)
