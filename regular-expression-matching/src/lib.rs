@@ -4,21 +4,42 @@ mod tests;
 pub struct Solution;
 
 impl Solution {
-    pub fn is_match(s: String, p: String) -> bool {
-        if p.len() == 0 {
-            return false;
+    pub fn is_match(text: String, pattern: String) -> bool {
+        if pattern.is_empty() {
+            return text.is_empty();
         }
 
-        let p0 = p.chars().nth(0).unwrap_or('\0');
-        let t0 = p.chars().nth(0).unwrap_or('\0');
-        let first_match = s.len() > 0 && (p0 == t0 || p0 == '*');
+        let first_match = !text.is_empty()
+            && (pattern.as_bytes()[0] == text.as_bytes()[0]
+                || pattern.as_bytes()[0] as char == '.');
 
-        if p.len() >= 2 && p.chars().nth(1).unwrap_or('\0') == '*' {
-            return (Self::is_match(s.clone(), String::from(&p[2..p.len()])))
-                || first_match && Self::is_match(String::from(&s[1..s.len()]), p);
+        if pattern.len() >= 2 && pattern.as_bytes()[1] as char == '*' {
+            return (Self::is_match(
+                text.clone(),
+                match pattern.get(2..) {
+                    None => String::from(""),
+                    Some(n) => String::from(n),
+                },
+            )) || (first_match
+                && Self::is_match(
+                    match text.get(1..) {
+                        None => String::from(""),
+                        Some(n) => String::from(n),
+                    },
+                    pattern,
+                ));
         } else {
             return first_match
-                && Self::is_match(String::from(&s[1..s.len()]), String::from(&p[1..p.len()]));
+                && Self::is_match(
+                    match text.get(1..) {
+                        None => String::from(""),
+                        Some(n) => String::from(n),
+                    },
+                    match pattern.get(1..) {
+                        None => String::from(""),
+                        Some(n) => String::from(n),
+                    },
+                );
         }
     }
 }
