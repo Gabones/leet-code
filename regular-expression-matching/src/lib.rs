@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 #[cfg(test)]
 mod tests;
 
@@ -5,6 +7,49 @@ pub struct Solution;
 
 impl Solution {
     pub fn is_match(text: String, pattern: String) -> bool {
+        fn dfs(
+            i: usize,
+            j: usize,
+            t: &[u8],
+            p: &[u8],
+            cache: &mut HashMap<(usize, usize), bool>,
+        ) -> bool {
+            if let Some(&v) = cache.get(&(i, j)) {
+                return v;
+            }
+
+            if p.is_empty() {
+                return t.is_empty();
+            }
+
+            if i >= t.len() && j >= p.len() {
+                return true;
+            }
+
+            if j >= p.len() {
+                return false;
+            }
+
+            let first_match = i < t.len() && (p[j] == b'.' || p[j] == t[i]);
+
+            if (j + 1) < p.len() && p[j + 1] == b'*' {
+                let result =
+                    (dfs(i, j + 2, t, p, cache)) || (first_match && dfs(i + 1, j, t, p, cache));
+                &cache.insert((i, j), result);
+                return result;
+            } else {
+                let result = first_match && dfs(i + 1, j + 1, t, p, cache);
+                &cache.insert((i, j), result);
+                return result;
+            }
+        }
+
+        let mut cache: HashMap<(usize, usize), bool> = HashMap::new();
+
+        return dfs(0, 0, text.as_bytes(), pattern.as_bytes(), &mut cache);
+    }
+
+    pub fn is_match_brute(text: String, pattern: String) -> bool {
         if pattern.is_empty() {
             return text.is_empty();
         }
