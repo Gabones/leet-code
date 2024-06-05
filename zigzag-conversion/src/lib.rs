@@ -31,7 +31,6 @@ impl Solution {
         vector.join("")
     }
 
-
     pub fn convert_pretty_but_inefficient(s: String, num_rows: i32) -> String {
         if num_rows == 1 {
             return s;
