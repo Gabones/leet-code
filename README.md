@@ -17,3 +17,4 @@ This repo is under a slowly construction...
 10. [Regular Expression Matching](https://github.com/Gabones/leet-code/tree/master/regular-expression-matching)
 11. [Container With Most Water](https://github.com/Gabones/leet-code/tree/master/container-with-most-water)
 12. [Integer to Roman](https://github.com/Gabones/leet-code/tree/master/integer-to-roman)
+13. [Roman to Integer](https://github.com/Gabones/leet-code/tree/master/roman-to-integer)
