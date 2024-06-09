@@ -4,8 +4,51 @@ I aim to write every solution in Rust in order to master the language.
 
 This repo is under a slowly construction...
 
+<table>
+  <tr>
+    <td valign="top">
+        <figure class="image">
+            <img src="./assets/two-sum.png" alt="two-sum">
+            <figcaption>1. <a href="https://github.com/Gabones/leet-code/tree/master/two-sum">Two Sum</a></figcaption>
+        </figure>
+    </td>
+    <td valign="top">
+        <figure class="image">
+            <img src="./assets/add-two-numbers.png" alt="two-sum">
+            <figcaption>2. <a href="https://github.com/Gabones/leet-code/tree/master/add-two-numbers">Add Two Numbers</a></figcaption>
+        </figure>
+    </td>
+    <td valign="top">
+        <figure class="image">
+            <img src="./assets/two-sum.png" alt="two-sum">
+            <figcaption><a href="https://github.com/Gabones/leet-code/tree/master/two-sum">1. Two Sum</a></figcaption>
+        </figure>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+        <figure class="image">
+            <img src="./assets/two-sum.png" alt="two-sum">
+            <figcaption><a href="https://github.com/Gabones/leet-code/tree/master/two-sum">1. Two Sum</a></figcaption>
+        </figure>
+    </td>
+    <td valign="top">
+        <figure class="image">
+            <img src="./assets/two-sum.png" alt="two-sum">
+            <figcaption><a href="https://github.com/Gabones/leet-code/tree/master/two-sum">1. Two Sum</a></figcaption>
+        </figure>
+    </td>
+    <td valign="top">
+        <figure class="image">
+            <img src="./assets/two-sum.png" alt="two-sum">
+            <figcaption><a href="https://github.com/Gabones/leet-code/tree/master/two-sum">1. Two Sum</a></figcaption>
+        </figure>
+    </td>
+  </tr>
+</table>
 
-1. [Two Sum](https://github.com/Gabones/leet-code/tree/master/two-sum)
+
+
 2. [Add Two Numbers](https://github.com/Gabones/leet-code/tree/master/add-two-numbers)
 3. [Longest Substring Without Repeating Characters](https://github.com/Gabones/leet-code/tree/master/longest-substring)
 4. [Median of Two Sorted Arrays](https://github.com/Gabones/leet-code/tree/master/median-sorted-arrays)
