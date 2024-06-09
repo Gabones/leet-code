@@ -8,39 +8,28 @@ This repo is under a slowly construction...
   <tr>
     <td valign="top">
         <figure class="image">
-            <img src="./assets/two-sum.png" alt="two-sum">
+            <img src="./assets/two-sum.png" alt="two-sum" style="height: 200px;">
             <figcaption>1. <a href="https://github.com/Gabones/leet-code/tree/master/two-sum">Two Sum</a></figcaption>
         </figure>
     </td>
     <td valign="top">
         <figure class="image">
-            <img src="./assets/add-two-numbers.png" alt="two-sum">
+            <img src="./assets/add-two-numbers.png" alt="add-two-numbers" style="height: 200px;">
             <figcaption>2. <a href="https://github.com/Gabones/leet-code/tree/master/add-two-numbers">Add Two Numbers</a></figcaption>
         </figure>
     </td>
-    <td valign="top">
-        <figure class="image">
-            <img src="./assets/two-sum.png" alt="two-sum">
-            <figcaption><a href="https://github.com/Gabones/leet-code/tree/master/two-sum">1. Two Sum</a></figcaption>
-        </figure>
     </td>
   </tr>
   <tr>
     <td valign="top">
         <figure class="image">
-            <img src="./assets/two-sum.png" alt="two-sum">
+            <img src="./assets/two-sum.png" alt="two-sum" stye="height: 200px;">
             <figcaption><a href="https://github.com/Gabones/leet-code/tree/master/two-sum">1. Two Sum</a></figcaption>
         </figure>
     </td>
     <td valign="top">
         <figure class="image">
-            <img src="./assets/two-sum.png" alt="two-sum">
-            <figcaption><a href="https://github.com/Gabones/leet-code/tree/master/two-sum">1. Two Sum</a></figcaption>
-        </figure>
-    </td>
-    <td valign="top">
-        <figure class="image">
-            <img src="./assets/two-sum.png" alt="two-sum">
+            <img src="./assets/two-sum.png" alt="two-sum" stye="height: 200px;">
             <figcaption><a href="https://github.com/Gabones/leet-code/tree/master/two-sum">1. Two Sum</a></figcaption>
         </figure>
     </td>
