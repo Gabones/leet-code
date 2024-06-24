@@ -4,6 +4,23 @@ mod tests;
 pub struct Solution;
 
 impl Solution {
+    pub fn longest_common_prefix_vertical(strs: Vec<String>) -> String {
+        if strs.len() == 0 {
+            return String::from("");
+        }
+
+        for i in 0..=strs[0].len() {
+            let c = strs[0].chars().nth(i);
+            for j in 0..strs.len() {
+                if i == strs[j].len() || strs[j].chars().nth(i) != c {
+                    return strs[0][0..i].to_string();
+                }
+            }
+        }
+
+        strs[0].to_string()
+    }
+
     pub fn longest_common_prefix_horizontal(strs: Vec<String>) -> String {
         if strs.len() == 0 {
             return String::from("");
@@ -12,7 +29,7 @@ impl Solution {
         let mut prefix = strs[0].to_string();
         for i in 0..strs.len() {
             while strs[i].find(&*prefix) != None {
-                prefix = (&prefix[..prefix.len()-1]).to_string();
+                prefix = (&prefix[..prefix.len() - 1]).to_string();
                 if prefix.is_empty() {
                     return String::from("");
                 }
@@ -21,7 +38,6 @@ impl Solution {
 
         prefix.to_string()
     }
-
 
     pub fn longest_common_prefix(strs: Vec<String>) -> String {
         fn common_prefix_length(s1: &str, s2: &str) -> i32 {
