@@ -39,6 +39,37 @@ impl Solution {
         prefix.to_string()
     }
 
+    pub fn longest_common_prefix_divide_and_conquer(strs: Vec<String>) -> String {
+        if strs.len() == 0 {
+            return String::from("");
+        }
+
+        let size: i32 = (strs.len() - 1) as i32;
+
+        Self::longest_common_prefix_divide(strs, 0, size)
+    }
+
+    fn longest_common_prefix_divide(strs: Vec<String>, l: i32, r: i32) -> String {
+        if l == r {
+            return strs[l as usize].clone();
+        } else {
+            let mid = (l + r) / 2;
+            let lcp_left = Self::longest_common_prefix_divide(strs.clone(), l, mid);
+            let lcp_right = Self::longest_common_prefix_divide(strs, mid + 1, r);
+            return Self::common_prefix(lcp_left, lcp_right);
+        }
+    }
+
+    fn common_prefix(left: String, right: String) -> String {
+        let min = std::cmp::min(left.len(), right.len());
+        for i in 0..min {
+            if left.chars().nth(i) != right.chars().nth(i) {
+                return left[..i].to_string();
+            }
+        }
+        left[..min].to_string()
+    }
+
     pub fn longest_common_prefix(strs: Vec<String>) -> String {
         fn common_prefix_length(s1: &str, s2: &str) -> i32 {
             let mut common_length = 0;

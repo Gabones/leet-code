@@ -4,7 +4,7 @@ use crate::Solution;
 // #[ignore]
 fn case_1() {
     assert_eq!(
-        Solution::longest_common_prefix_vertical(vec![
+        Solution::longest_common_prefix_divide_and_conquer(vec![
             String::from("flower"),
             String::from("flow"),
             String::from("flight")
@@ -17,7 +17,7 @@ fn case_1() {
 // #[ignore]
 fn case_2() {
     assert_eq!(
-        Solution::longest_common_prefix_vertical(vec![
+        Solution::longest_common_prefix_divide_and_conquer(vec![
             String::from("dog"),
             String::from("racecar"),
             String::from("car")
@@ -30,7 +30,7 @@ fn case_2() {
 // #[ignore]
 fn case_3() {
     assert_eq!(
-        Solution::longest_common_prefix_vertical(vec![String::from(""),]),
+        Solution::longest_common_prefix_divide_and_conquer(vec![String::from(""),]),
         ""
     );
 }
@@ -39,7 +39,7 @@ fn case_3() {
 // #[ignore]
 fn case_4() {
     assert_eq!(
-        Solution::longest_common_prefix_vertical(vec![String::from("a"),]),
+        Solution::longest_common_prefix_divide_and_conquer(vec![String::from("a"),]),
         "a"
     );
 }
@@ -48,7 +48,10 @@ fn case_4() {
 // #[ignore]
 fn case_120() {
     assert_eq!(
-        Solution::longest_common_prefix_vertical(vec![String::from("abb"), String::from("abc")]),
+        Solution::longest_common_prefix_divide_and_conquer(vec![
+            String::from("abb"),
+            String::from("abc")
+        ]),
         String::from("ab")
     );
 }
@@ -56,7 +59,10 @@ fn case_120() {
 // #[ignore]
 fn case_125() {
     assert_eq!(
-        Solution::longest_common_prefix_vertical(vec![String::from("abca"),String::from("abc")]),
+        Solution::longest_common_prefix_divide_and_conquer(vec![
+            String::from("abca"),
+            String::from("abc")
+        ]),
         String::from("abc")
     )
 }
