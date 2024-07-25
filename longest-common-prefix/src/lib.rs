@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 #[cfg(test)]
 mod tests;
 
@@ -112,7 +114,7 @@ impl Solution {
         fn is_common_prefix(strs: Vec<String>, length: usize) -> bool {
             let str1 = strs[0][0..length].to_string();
             for str in strs {
-                if str.find(&str1).is_some() {
+                if !str.starts_with(&str1) {
                     return false;
                 }
             }
@@ -135,5 +137,78 @@ impl Solution {
         }
 
         strs[0][0..((low + high) / 2)].to_string()
+    }
+
+    pub fn longest_common_prefix_trie(q: String, strs: Vec<String>) -> String {
+        if strs.len() == 0 {
+            return String::from("");
+        }
+        if strs.len() == 1 {
+            return strs[0].clone().to_string();
+        }
+        let mut trie = Trie::new();
+        for word in strs {
+            trie.insert(&word);
+        }
+        return trie.search_longest_prefix(&q);
+    }
+}
+
+// Approach: Trie Tree
+#[derive(Debug)]
+struct TrieNode {
+    children: HashMap<char, TrieNode>,
+    is_end: bool,
+    link_count: usize,
+}
+
+struct Trie {
+    root: TrieNode,
+}
+
+impl TrieNode {
+    fn new() -> Self {
+        TrieNode {
+            children: HashMap::new(),
+            is_end: false,
+            link_count: 0,
+        }
+    }
+}
+
+impl Trie {
+    fn new() -> Self {
+        Trie {
+            root: TrieNode::new(),
+        }
+    }
+
+    fn insert(&mut self, word: &str) {
+        let mut node = &mut self.root;
+        for char in word.chars() {
+            node = node.children.entry(char).or_insert_with(|| {
+                node.link_count += 1;
+                TrieNode::new()
+            });
+        }
+        node.is_end = true;
+    }
+
+    fn search_longest_prefix(&self, word: &str) -> String {
+        let mut node = &self.root;
+        let mut prefix = String::new();
+        for char in word.chars() {
+            if let Some(child) = node.children.get(&char) {
+                if node.link_count == 1 && !node.is_end {
+                    prefix.push(char);
+                    node = child;
+                } else {
+                    break;
+                }
+            } else {
+                break;
+            }
+        }
+        prefix
     }
 }
