@@ -1,14 +1,15 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
-
 #[cfg(test)]
-mod tests {
-    use super::*;
+mod tests;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+pub struct Solution;
+
+impl Solution {
+    pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
+        let pointer_1 = 0;
+        let pointer_2 = nums.len();
+
+        while pointer_1 < pointer_2 {}
+
+        return vec![vec![0]];
     }
 }
