@@ -99,3 +99,5 @@ This repo is under a slowly construction...
     </td>
   </tr>
 </table>
+
+217. [Contains Duplicate](https://github.com/Gabones/leet-code/tree/master/contains-duplicate)
