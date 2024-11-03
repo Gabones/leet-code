@@ -1,9 +1,4 @@
-#![allow(dead_code)]
-
-mod listnode;
-use listnode::{to_list, to_vector, ListNode};
-#[cfg(test)]
-mod tests;
+use utils::listnode::{to_list, to_vector, ListNode};
 
 pub struct Solution;
 
@@ -21,13 +16,13 @@ impl Solution {
         vec_result = loop {
             carry += v1.get(i).unwrap_or(&0) + v2.get(i).unwrap_or(&0);
             vec_result.push(carry % 10);
-            carry = carry / 10;
+            carry /= 10;
             i += 1;
             if v1.get(i).is_none() && v2.get(i).is_none() && carry == 0 {
                 break vec_result;
             }
         };
 
-        return to_list(vec_result);
+        to_list(vec_result)
     }
 }

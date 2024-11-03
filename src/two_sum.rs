@@ -1,8 +1,5 @@
 use std::collections::HashMap;
 
-#[cfg(test)]
-mod tests;
-
 pub struct Solution;
 
 impl Solution {
@@ -16,7 +13,7 @@ impl Solution {
             }
         }
 
-        return Vec::from([0, 0]);
+        Vec::from([0, 0])
     }
 
     // Approach 2: Two-pass Hash Table
@@ -33,7 +30,7 @@ impl Solution {
             }
         }
 
-        return Vec::new();
+        Vec::new()
     }
 
     // Approach 3: One-pass Hash Table
@@ -49,6 +46,6 @@ impl Solution {
             }
         }
 
-        return Vec::new();
+        Vec::new()
     }
 }

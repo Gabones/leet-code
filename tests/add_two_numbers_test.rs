@@ -1,5 +1,5 @@
-use crate::listnode::to_list;
-use crate::Solution;
+use leet_code::add_two_numbers::Solution;
+use utils::listnode::to_list;
 
 #[test]
 //#[ignore]
