@@ -3,6 +3,7 @@ use std::mem::swap;
 
 pub struct Solution;
 
+// TODO Can i move this function to utils/ ?
 pub fn solve(
     a: &Vec<i32>,
     b: &Vec<i32>,
