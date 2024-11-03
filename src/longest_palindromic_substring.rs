@@ -1,3 +1,5 @@
+use std::fmt::Write;
+
 pub struct Solution;
 
 impl Solution {
@@ -92,8 +94,10 @@ impl Solution {
         let old_s = s.chars().collect::<String>();
         let s: String = s
             .chars()
-            .map(|c: char| format!("#{}", c))
-            .collect::<String>()
+            .fold(String::new(), |mut output, c: char| {
+                let _ = write!(output, "#{}", c);
+                output
+            })
             + "#";
         let n: usize = s.len();
         let mut vec_radi: Vec<i32> = vec![0; n];
