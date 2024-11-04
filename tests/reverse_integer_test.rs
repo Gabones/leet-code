@@ -1,4 +1,4 @@
-use crate::Solution;
+use leet_code::reverse_integer::Solution;
 
 #[test]
 // #[ignore]

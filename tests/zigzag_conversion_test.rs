@@ -1,4 +1,4 @@
-use crate::Solution;
+use leet_code::zigzag_conversion::Solution;
 
 #[test]
 // #[ignore]

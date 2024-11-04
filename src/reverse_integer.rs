@@ -1,6 +1,3 @@
-#[cfg(test)]
-mod tests;
-
 pub struct Solution;
 
 impl Solution {
