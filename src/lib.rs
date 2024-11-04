@@ -5,3 +5,4 @@ pub mod two_sum;
 pub mod longest_palindromic_substring;
 pub mod zigzag_conversion;
 pub mod reverse_integer;
+pub mod string_to_integer;
