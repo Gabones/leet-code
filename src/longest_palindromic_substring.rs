@@ -92,13 +92,10 @@ impl Solution {
     pub fn longest_palindrome_manachers(s: String) -> String {
         use std::cmp;
         let old_s = s.chars().collect::<String>();
-        let s: String = s
-            .chars()
-            .fold(String::new(), |mut output, c: char| {
-                let _ = write!(output, "#{}", c);
-                output
-            })
-            + "#";
+        let s: String = s.chars().fold(String::new(), |mut output, c: char| {
+            let _ = write!(output, "#{}", c);
+            output
+        }) + "#";
         let n: usize = s.len();
         let mut vec_radi: Vec<i32> = vec![0; n];
         let [mut center, mut radius] = [0, 0];
