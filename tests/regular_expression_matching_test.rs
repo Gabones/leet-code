@@ -1,4 +1,4 @@
-use crate::Solution;
+use leet_code::regular_expression_matching::Solution;
 
 #[test]
 // #[ignore]

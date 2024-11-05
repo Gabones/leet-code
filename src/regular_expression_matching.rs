@@ -1,8 +1,5 @@
 use std::collections::HashMap;
 
-#[cfg(test)]
-mod tests;
-
 pub struct Solution;
 
 impl Solution {
@@ -35,12 +32,12 @@ impl Solution {
             if (j + 1) < p.len() && p[j + 1] == b'*' {
                 let result =
                     (dfs(i, j + 2, t, p, cache)) || (first_match && dfs(i + 1, j, t, p, cache));
-                &cache.insert((i, j), result);
-                return result;
+                let _ = &cache.insert((i, j), result);
+                result
             } else {
                 let result = first_match && dfs(i + 1, j + 1, t, p, cache);
-                &cache.insert((i, j), result);
-                return result;
+                let _ = &cache.insert((i, j), result);
+                result
             }
         }
 
