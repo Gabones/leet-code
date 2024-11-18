@@ -11,3 +11,4 @@ pub mod regular_expression_matching;
 pub mod container_with_most_water;
 pub mod integer_to_roman;
 pub mod roman_to_integer;
+pub mod longest_common_prefix;
