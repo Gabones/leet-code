@@ -1,6 +1,3 @@
-#[cfg(test)]
-mod tests;
-
 pub struct Solution;
 
 impl Solution {
@@ -25,14 +22,13 @@ impl Solution {
         let mut result = String::new();
         while number > 0 {
             let mut div: i32 = number / num[i].0;
-            number = number % num[i].0;
+            number %= num[i].0;
             while div > 0 {
-                result.push_str(num[i as usize].1);
+                result.push_str(num[i].1);
                 div -= 1;
             }
-            if i > 0 {
-                i -= 1;
-            }
+
+            i = i.saturating_sub(1); 
         }
 
         result
@@ -48,14 +44,13 @@ impl Solution {
         let mut result: Vec<String> = Vec::new();
         while number > 0 {
             let mut div: i32 = number / num[i];
-            number = number % num[i];
+            number %= num[i];
             while div > 0 {
-                result.push(sym[i as usize].to_string());
+                result.push(sym[i].to_string());
                 div -= 1;
             }
-            if i > 0 {
-                i -= 1;
-            }
+           
+            i = i.saturating_sub(1);
         }
 
         result.join("")

@@ -9,3 +9,4 @@ pub mod two_sum;
 pub mod zigzag_conversion;
 pub mod regular_expression_matching;
 pub mod container_with_most_water;
+pub mod integer_to_roman;

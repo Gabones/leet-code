@@ -1,4 +1,4 @@
-use crate::Solution;
+use leet_code::integer_to_roman::Solution;
 
 #[test]
 // #[ignore]
