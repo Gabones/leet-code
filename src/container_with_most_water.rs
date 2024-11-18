@@ -1,13 +1,10 @@
 use std::cmp;
 
-#[cfg(test)]
-mod tests;
-
 pub struct Solution;
 
 impl Solution {
     pub fn max_area(height: Vec<i32>) -> i32 {
-        let (mut area_max, mut left, mut right) = (0, height.len() - 1, 0);
+        let (mut area_max, mut left, mut right) = (0, 0, height.len() - 1);
 
         while left < right {
             let min = cmp::min(height[left], height[right]);

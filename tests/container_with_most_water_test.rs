@@ -1,4 +1,4 @@
-use crate::Solution;
+use leet_code::container_with_most_water::Solution;
 
 #[test]
 // #[ignore]
