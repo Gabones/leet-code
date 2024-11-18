@@ -144,7 +144,7 @@ impl Solution {
         if strs.len() == 1 {
             return strs[0].clone().to_string();
         }
-        
+
         let mut trie = Trie::new();
         for word in strs {
             trie.insert(&word);

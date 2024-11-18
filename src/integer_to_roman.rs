@@ -28,7 +28,7 @@ impl Solution {
                 div -= 1;
             }
 
-            i = i.saturating_sub(1); 
+            i = i.saturating_sub(1);
         }
 
         result
@@ -49,7 +49,7 @@ impl Solution {
                 result.push(sym[i].to_string());
                 div -= 1;
             }
-           
+
             i = i.saturating_sub(1);
         }
 
