@@ -1,8 +1,3 @@
-use std::i32;
-
-#[cfg(test)]
-mod tests;
-
 pub struct Solution;
 
 impl Solution {
@@ -35,6 +30,6 @@ impl Solution {
             }
         }
 
-        return closest;
+        closest
     }
 }

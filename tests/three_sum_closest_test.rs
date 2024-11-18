@@ -1,4 +1,4 @@
-use crate::Solution;
+use leet_code::three_sum_closest::Solution;
 
 #[test]
 #[ignore]

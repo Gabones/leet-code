@@ -11,5 +11,7 @@ pub mod reverse_integer;
 pub mod roman_to_integer;
 pub mod string_to_integer;
 pub mod three_sum;
+pub mod three_sum_closest;
+pub mod group_anagrams;
 pub mod two_sum;
 pub mod zigzag_conversion;
