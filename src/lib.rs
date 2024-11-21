@@ -1,5 +1,6 @@
 pub mod add_two_numbers;
 pub mod container_with_most_water;
+pub mod group_anagrams;
 pub mod integer_to_roman;
 pub mod longest_common_prefix;
 pub mod longest_palindromic_substring;
@@ -12,6 +13,5 @@ pub mod roman_to_integer;
 pub mod string_to_integer;
 pub mod three_sum;
 pub mod three_sum_closest;
-pub mod group_anagrams;
 pub mod two_sum;
 pub mod zigzag_conversion;

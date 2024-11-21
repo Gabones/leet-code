@@ -12,7 +12,7 @@ impl Solution {
                 counts[c as usize - 'a' as usize] += 1;
             }
 
-            result.entry(counts).or_insert_with(Vec::new).push(word);
+            result.entry(counts).or_default().push(word);
         }
 
         result.into_values().collect()

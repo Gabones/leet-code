@@ -8,12 +8,8 @@ macro_rules! vec_of_strings {
 fn case_1() {
     assert_eq!(
         Solution::group_anagrams(vec_of_strings!["eat", "tea", "tan", "ate", "nat", "bat"]),
-        vec![
-            vec_of_strings!["bat"],
-            vec_of_strings!["nat", "tan"],
-            vec_of_strings!["ate", "eat", "tea"]
-        ] 
-   )
+        vec![vec!["bat"], vec!["tan", "nat"], vec!["eat", "tea", "ate"]]
+    )
 }
 
 #[test]
