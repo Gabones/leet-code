@@ -15,3 +15,4 @@ pub mod three_sum;
 pub mod three_sum_closest;
 pub mod two_sum;
 pub mod zigzag_conversion;
+pub mod contains_duplicate;
