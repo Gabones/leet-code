@@ -18,3 +18,4 @@ pub mod three_sum_closest;
 pub mod two_sum;
 pub mod valid_anagram;
 pub mod zigzag_conversion;
+pub mod encode_and_decode_strings;
