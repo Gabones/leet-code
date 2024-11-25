@@ -20,3 +20,4 @@ pub mod valid_anagram;
 pub mod zigzag_conversion;
 pub mod encode_and_decode_strings;
 pub mod top_k_frequent_elements;
+pub mod longest_substring;

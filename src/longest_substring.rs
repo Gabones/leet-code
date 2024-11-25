@@ -1,20 +1,19 @@
 use std::cmp;
 use std::collections::HashSet;
 
-#[cfg(test)]
-mod tests;
-
 pub struct Solution;
 
 impl Solution {
     pub fn length_of_longest_substring(s: String) -> i32 {
-        if s.len() == 0 {
+        if s.is_empty() {
             return 0;
         }
+
         let mut biggest: i32 = 0;
         let vec_char: Vec<char> = s.chars().collect();
         let mut curr_hash = HashSet::new();
         let mut i = 0;
+        
         while i < s.len() {
             match curr_hash.get(&vec_char[i]) {
                 None => {
@@ -32,6 +31,7 @@ impl Solution {
                     curr_hash.insert(vec_char[i]);
                 }
             }
+
             i += 1;
         }
 

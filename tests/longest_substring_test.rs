@@ -1,4 +1,4 @@
-use crate::Solution;
+use leet_code::longest_substring::Solution;
 
 #[test]
 // #[ignore]
