@@ -16,4 +16,5 @@ pub mod string_to_integer;
 pub mod three_sum;
 pub mod three_sum_closest;
 pub mod two_sum;
+pub mod valid_anagram;
 pub mod zigzag_conversion;
