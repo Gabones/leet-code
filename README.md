@@ -21,6 +21,7 @@ This repo is under a slowly construction...
 15. [3Sum](https://github.com/Gabones/leet-code/tree/master/three-sum)
 16. [3Sum Closest](https://github.com/Gabones/leet-code/tree/master/three-sum-closest)
 49. [Group Anagrams](https://github.com/Gabones/leet-code/tree/master/group-anagrams)
+128. [Longest Consecutive Sequence](https://github.com/Gabones/leet-code)
 217. [Contains Duplicate](https://github.com/Gabones/leet-code/tree/master/contains-duplicate)
 238. [Product of Array Except Self](https://github.com/Gabones/leet-code/tree/master/product-of-array-except-self)
 242. [Valid Anagram](https://github.com/Gabones/leet-code/tree/master/valid-anagram)

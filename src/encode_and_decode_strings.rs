@@ -19,7 +19,7 @@ impl Solution {
                 j += 1;
             }
             let length: i32 = str[index as usize..j as usize].parse::<i32>().unwrap();
-            result.push(str[(j+1) as usize..(j+1+length) as usize].to_string());
+            result.push(str[(j + 1) as usize..(j + 1 + length) as usize].to_string());
             index = j + 1 + length;
         }
 

@@ -13,7 +13,7 @@ impl Solution {
         let vec_char: Vec<char> = s.chars().collect();
         let mut curr_hash = HashSet::new();
         let mut i = 0;
-        
+
         while i < s.len() {
             match curr_hash.get(&vec_char[i]) {
                 None => {
