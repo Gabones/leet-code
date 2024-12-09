@@ -16,3 +16,9 @@ fn case_2() {
 fn case_3() {
     assert!(Solution::is_palindrome(" ".to_string()));
 }
+
+#[test]
+fn case_5() {
+    assert!(Solution::is_palindrome("a.".to_string()));
+}
+

@@ -9,25 +9,24 @@ impl Solution {
         cleaned.chars().rev().collect::<String>() == cleaned
     }
 
+    // Approach 2 - Two Pointers
     pub fn is_palindrome(s: String) -> bool {
         let (mut left, mut right) = (0, s.len() - 1);
+        let s_vec: Vec<char> = s.chars().collect();
         while left < right {
-            if s.chars().nth(left).expect("left unwrap fail").is_alphanumeric() && s.chars().nth(right).expect("right unwrap fail").is_alphanumeric() {
-                if s.chars().nth(left) == s.chars().nth(right) {
-                    left += 1;
-                    right -= 1;
-                } else {
-                   return false;
-                }
-            }
-
-            if !s.chars().nth(left).expect("left unwrap fail").is_alphanumeric() {
+            while left < right && !s_vec[left].is_alphanumeric() {
                 left += 1;
             }
 
-            if !s.chars().nth(right).expect("right unwrap fail").is_alphanumeric() {
-                right -= 1;
+            while left < right && !s_vec[right].is_alphanumeric() {
+                right = right.saturating_sub(1);
             }
+
+            if s_vec[left].to_ascii_lowercase() != s_vec[right].to_ascii_lowercase() {
+                return false;
+            }
+            left += 1;
+            right = right.saturating_sub(1);
         }
 
         true
