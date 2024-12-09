@@ -21,4 +21,5 @@ pub mod three_sum_closest;
 pub mod top_k_frequent_elements;
 pub mod two_sum;
 pub mod valid_anagram;
+pub mod valid_palindrome;
 pub mod zigzag_conversion;
