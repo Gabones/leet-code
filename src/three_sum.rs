@@ -34,19 +34,19 @@ impl Solution {
 
         let mut result: Vec<Vec<i32>> = Vec::new();
         for i in 0..nums.len() {
-            *count.entry(i as i32).or_insert(0) -= 1;
+            *count.entry(nums[i]).or_insert(0) -= 1;
             if i > 0 && nums[i] == nums[i-1] {
                 continue;
             }
 
             for j in i+1..nums.len() {
-                *count.entry(i as i32).or_insert(0) -= 1;
+                *count.entry(nums[j]).or_insert(0) -= 1;
                 if j > i + 1 && nums[j] == nums[j-1] {
                     continue;
                 }
                 
                 let target = -(nums[i] + nums[j]);
-                if count.entry(target) > 0 {
+                if count.get(&target).is_some() && *count.get(&target).unwrap() > 0 {
                     result.push(vec![nums[i], nums[j], target]);
                 }
             }
