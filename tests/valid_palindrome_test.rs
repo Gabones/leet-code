@@ -21,4 +21,3 @@ fn case_3() {
 fn case_5() {
     assert!(Solution::is_palindrome("a.".to_string()));
 }
-

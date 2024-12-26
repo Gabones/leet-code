@@ -9,16 +9,16 @@ impl Solution {
         let mut set_result = HashSet::new();
 
         for i in 0..nums.len() {
-            for j in i+1..nums.len() {
-                for k in j+1..nums.len() {
+            for j in i + 1..nums.len() {
+                for k in j + 1..nums.len() {
                     if nums[i] + nums[j] + nums[k] == 0 {
                         set_result.insert(vec![nums[i], nums[j], nums[k]]);
                     }
                 }
             }
         }
-        
-        let mut result:Vec<Vec<i32>> = set_result.into_iter().collect();
+
+        let mut result: Vec<Vec<i32>> = set_result.into_iter().collect();
         result.sort();
         result
     }
@@ -29,29 +29,29 @@ impl Solution {
         let mut count: HashMap<i32, i32> = HashMap::new();
 
         for num in nums.iter() {
-           *count.entry(*num).or_insert(0) += 1;
+            *count.entry(*num).or_insert(0) += 1;
         }
 
         let mut result: Vec<Vec<i32>> = Vec::new();
         for i in 0..nums.len() {
             *count.entry(nums[i]).or_insert(0) -= 1;
-            if i > 0 && nums[i] == nums[i-1] {
+            if i > 0 && nums[i] == nums[i - 1] {
                 continue;
             }
 
-            for j in i+1..nums.len() {
+            for j in i + 1..nums.len() {
                 *count.entry(nums[j]).or_insert(0) -= 1;
-                if j > i + 1 && nums[j] == nums[j-1] {
+                if j > i + 1 && nums[j] == nums[j - 1] {
                     continue;
                 }
-                
+
                 let target = -(nums[i] + nums[j]);
                 if count.get(&target).is_some() && *count.get(&target).unwrap() > 0 {
                     result.push(vec![nums[i], nums[j], target]);
                 }
             }
 
-            for j in i+1..nums.len() {
+            for j in i + 1..nums.len() {
                 *count.entry(nums[j]).or_insert(0) += 1;
             }
         }
