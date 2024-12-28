@@ -23,6 +23,7 @@ This repo is under a slowly construction...
 - [49. Group Anagrams](https://github.com/Gabones/leet-code/blob/master/src/group_anagrams.rs)
 - [125. Valid Palindrome](https://github.com/Gabones/leet-code/blob/master/src/valid_palindrome.rs)
 - [128. Longest Consecutive Sequence](https://github.com/Gabones/leet-code/blob/master/src/longest_consecutive_sequence.rs)
+- [167. Two Sum II - Input Array Is Sorted](https://github.com/Gabones/leet-code/blob/master/src/two_sum_ii_input_array_is_sorted.rs)
 - [217. Contains Duplicate](https://github.com/Gabones/leet-code/blob/master/src/contains_duplicate.rs)
 - [238. Product of Array Except Self](https://github.com/Gabones/leet-code/blob/master/src/product_of_array_except_self.rs)
 - [242. Valid Anagram](https://github.com/Gabones/leet-code/blob/master/src/valid_anagram.rs)
