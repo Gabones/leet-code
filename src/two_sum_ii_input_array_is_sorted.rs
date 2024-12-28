@@ -1,3 +1,5 @@
+use std::cmp::Ordering;
+
 pub struct Solution;
 
 impl Solution {
@@ -5,12 +7,10 @@ impl Solution {
         let (mut left, mut right) = (0 as usize, numbers.len() - 1);
 
         while left < right {
-            if numbers[left] + numbers[right] > target {
-                right -= 1;
-            } else if numbers[left] + numbers[right] < target {
-                left += 1;
-            } else {
-                return vec![(left + 1) as i32, (right + 1) as i32];
+            match (numbers[left] + numbers[right]).cmp(&target) {
+                Ordering::Greater => right -= 1,
+                Ordering::Less => left += 1,
+                Ordering::Equal => return vec![(left + 1) as i32, (right + 1) as i32],
             }
         }
 
