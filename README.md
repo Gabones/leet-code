@@ -21,6 +21,7 @@ This repo is under a slowly construction...
 - [15. 3Sum](https://github.com/Gabones/leet-code/blob/master/src/three_sum.rs)
 - [16. 3Sum Closest](https://github.com/Gabones/leet-code/blob/master/src/three_sum_closest.rs)
 - [20. Valid Parentheses](https://github.com/Gabones/leet-code/blob/master/src/valid_parentheses.rs)
+- [22. Generate Parentheses](https://github.com/Gabones/leet-code/blob/master/src/generate_parentheses.rs)
 - [49. Group Anagrams](https://github.com/Gabones/leet-code/blob/master/src/group_anagrams.rs)
 - [125. Valid Palindrome](https://github.com/Gabones/leet-code/blob/master/src/valid_palindrome.rs)
 - [128. Longest Consecutive Sequence](https://github.com/Gabones/leet-code/blob/master/src/longest_consecutive_sequence.rs)

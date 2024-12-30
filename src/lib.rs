@@ -3,6 +3,7 @@ pub mod container_with_most_water;
 pub mod contains_duplicate;
 pub mod encode_and_decode_strings;
 pub mod evaluate_reverse_polish_notation;
+pub mod generate_parentheses;
 pub mod group_anagrams;
 pub mod integer_to_roman;
 pub mod longest_common_prefix;
