@@ -1,19 +1,20 @@
 pub struct MinStack {
     stack: Vec<i64>,
-    min: i64
+    min: i64,
 }
 
-
-/** 
+/**
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
 impl MinStack {
-
     pub fn new() -> Self {
-        MinStack { stack: Vec::new(), min: 0 }
+        MinStack {
+            stack: Vec::new(),
+            min: 0,
+        }
     }
-    
+
     pub fn push(&mut self, val: i32) {
         let val = val as i64;
         if self.stack.is_empty() {
@@ -26,7 +27,7 @@ impl MinStack {
             }
         }
     }
-    
+
     pub fn pop(&mut self) {
         if !self.stack.is_empty() {
             let pop = self.stack.last().copied().unwrap();
@@ -36,7 +37,7 @@ impl MinStack {
             }
         }
     }
-    
+
     pub fn top(&self) -> i32 {
         let top = *self.stack.last().unwrap();
         if top > 0 {
@@ -45,9 +46,8 @@ impl MinStack {
             return self.min as i32;
         }
     }
-    
+
     pub fn get_min(&self) -> i32 {
         self.min as i32
     }
 }
-
