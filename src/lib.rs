@@ -1,6 +1,7 @@
 pub mod add_two_numbers;
 pub mod container_with_most_water;
 pub mod contains_duplicate;
+pub mod daily_temperatures;
 pub mod encode_and_decode_strings;
 pub mod evaluate_reverse_polish_notation;
 pub mod generate_parentheses;

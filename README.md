@@ -32,3 +32,4 @@ This repo is under a slowly construction...
 - [242. Valid Anagram](https://github.com/Gabones/leet-code/blob/master/src/valid_anagram.rs)
 - [271. Encode And Decode Strings](https://github.com/Gabones/leet-code/blob/master/src/enconde_and_decode_strings.rs)
 - [347. Top K Frequent Elements](https://github.com/Gabones/leet-code/blob/master/src/top_k_frequent_elements.rs)
+- [739. Daily Temperatures](https://github.com/Gabones/leet-code/blob/master/src/daily_temperatures.rs)
