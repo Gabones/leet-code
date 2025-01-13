@@ -9,6 +9,7 @@ impl ListNode {
     pub fn new(val: i32) -> Self {
         ListNode { next: None, val }
     }
+    
     pub fn append(&mut self, elem: i32) {
         match self.next {
             Option::Some(ref mut next_address) => {
