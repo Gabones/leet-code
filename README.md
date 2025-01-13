@@ -23,6 +23,7 @@ This repo is under a slowly construction...
 - [20. Valid Parentheses](https://github.com/Gabones/leet-code/blob/master/src/valid_parentheses.rs)
 - [22. Generate Parentheses](https://github.com/Gabones/leet-code/blob/master/src/generate_parentheses.rs)
 - [49. Group Anagrams](https://github.com/Gabones/leet-code/blob/master/src/group_anagrams.rs)
+- [74. Search a 2D Matrix](https://github.com/Gabones/leet-code/blob/master/src/search_a_2d_matrix.rs)
 - [125. Valid Palindrome](https://github.com/Gabones/leet-code/blob/master/src/valid_palindrome.rs)
 - [128. Longest Consecutive Sequence](https://github.com/Gabones/leet-code/blob/master/src/longest_consecutive_sequence.rs)
 - [155. Min Stack](https://github.com/Gabones/leet-code/blob/master/src/min_stack.rs)
