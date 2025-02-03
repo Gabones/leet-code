@@ -9,6 +9,7 @@ pub mod evaluate_reverse_polish_notation;
 pub mod generate_parentheses;
 pub mod group_anagrams;
 pub mod integer_to_roman;
+pub mod koko_eating_bananas;
 pub mod longest_common_prefix;
 pub mod longest_consecutive_sequence;
 pub mod longest_palindromic_substring;

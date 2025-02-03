@@ -36,3 +36,4 @@ This repo is under a slowly construction...
 - [704. Binary Search](https://github.com/Gabones/leet-code/blob/master/src/binary_search.rs)
 - [739. Daily Temperatures](https://github.com/Gabones/leet-code/blob/master/src/daily_temperatures.rs)
 - [853. Car Fleet](https://github.com/Gabones/leet-code/blob/master/src/car_fleet.rs)
+- [875. Koko Eating Bananas](https://github.com/Gabones/leet-code/blob/master/src/koko_eating_bananas.rs)
